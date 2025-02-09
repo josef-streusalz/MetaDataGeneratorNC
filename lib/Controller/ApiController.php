@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace OCA\MetadataGenerator\Controller;
 
+
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\Files\IRootFolder;
@@ -20,7 +21,7 @@ class ApiController extends Controller {
         IRequest $request,
         IRootFolder $rootFolder,
         ?string $userId,
-        ILogger $logger
+        LoggerInterface $logger  // ✅ FIX: Use Psr\Log\LoggerInterface
     ) {
         parent::__construct($appName, $request);
         $this->rootFolder = $rootFolder;

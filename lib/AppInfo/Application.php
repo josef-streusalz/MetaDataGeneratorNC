@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace OCA\MetadataGenerator\AppInfo;
 
@@ -21,7 +22,8 @@ class Application extends App implements IBootstrap {
      */
     public function register(IRegistrationContext $context): void {
         $context->registerService(LoggerInterface::class, function ($c) {
-            return new class($c->get(ILogger::class)) implements LoggerInterface {
+            $ilogger = $c->query(ILogger::class);
+            return new class($ilogger) implements LoggerInterface {
                 private $logger;
                 public function __construct(ILogger $logger) {
                     $this->logger = $logger;
@@ -36,7 +38,7 @@ class Application extends App implements IBootstrap {
                 public function debug($message, array $context = []) { $this->logger->log(ILogger::DEBUG, $message, $context); }
                 public function log($level, $message, array $context = []) { $this->logger->log($level, $message, $context); }
             };
-        });
+        });        
     }
 
     /**

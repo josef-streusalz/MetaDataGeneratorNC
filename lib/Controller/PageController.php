@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 namespace OCA\MetadataGenerator\Controller;
@@ -9,11 +8,18 @@ use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IRequest;
-use OCP\ILogger;
+use Psr\Log\LoggerInterface;  // ✅ Keep Psr LoggerInterface
 
 class PageController extends Controller {
-    public function __construct(string $appName, IRequest $request, ILogger $logger) {
+    private LoggerInterface $logger;  
+
+    public function __construct(
+        string $appName,
+        IRequest $request,
+        LoggerInterface $logger  // ✅ Now properly injected
+    ) {
         parent::__construct($appName, $request);
+        $this->logger = $logger;
     }
 
     /**
@@ -21,14 +27,12 @@ class PageController extends Controller {
      *
      * @return TemplateResponse
      */
-    #[NoCSRFRequired] // Disable CSRF check for this route
-    #[NoAdminRequired] // Ensure no admin privileges are required
-
-
+    #[NoCSRFRequired] // ✅ Disable CSRF check for this route
+    #[NoAdminRequired] // ✅ Ensure no admin privileges are required
     public function main(): TemplateResponse {
-        error_log("Metadata Generator app route accessed");
-        error_log("PageController::main() accessed"); // Logs to the PHP error log
+        // ✅ Use Nextcloud's logger for debugging
+        $this->logger->info("Metadata Generator app route accessed");
+
         return new TemplateResponse('metadatagenerator', 'main');
     }
 }
-

@@ -1,5 +1,8 @@
 <?php
+
 use OCP\Util;
+
+
 $appId = 'metadatagenerator';
 
 Util::addScript($appId, $appId . '-main');
