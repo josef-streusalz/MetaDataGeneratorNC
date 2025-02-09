@@ -20,7 +20,7 @@ class ApiController extends Controller {
         IRequest $request,
         IRootFolder $rootFolder,
         ?string $userId,
-        LoggerInterface $logger
+        ILogger $logger
     ) {
         parent::__construct($appName, $request);
         $this->rootFolder = $rootFolder;

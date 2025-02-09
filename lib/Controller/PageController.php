@@ -9,9 +9,10 @@ use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IRequest;
+use OCP\ILogger;
 
 class PageController extends Controller {
-    public function __construct(string $appName, IRequest $request) {
+    public function __construct(string $appName, IRequest $request, ILogger $logger) {
         parent::__construct($appName, $request);
     }
 
