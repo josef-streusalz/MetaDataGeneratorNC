@@ -1,4 +1,4 @@
-# MetaDataGeneratorNC – FAIR RDM Metadata Templates for Nextcloud
+# MetaDataGeneratorNC – FAIR RDM Metadata Templates for Nextcloud (app in development)
 
 This repository is a template for a Nextcloud app called **MetaDataGeneratorNC** that enables users to create, manage, and apply standardized metadata templates directly within Nextcloud. By using this app, you can generate metadata templates and attach metadata (in the form of XML files) to your project or data folders. This approach transforms Nextcloud into a FAIR (Findable, Accessible, Interoperable, and Reusable) research data management platform, contributing to the research data lifecycle and enhancing data reuse.
 
