@@ -1,4 +1,4 @@
-# MetaDataGeneratorNC – FAIR RDM Metadata Templates for Nextcloud (under construction)
+# MetaDataGeneratorNC – FAIR RDM Metadata Templates for Nextcloud
 
 This repository is a template for a Nextcloud app called **MetaDataGeneratorNC** that enables users to create, manage, and apply standardized metadata templates directly within Nextcloud. By using this app, you can generate metadata templates and attach metadata (in the form of XML files) to your project or data folders. This approach transforms Nextcloud into a FAIR (Findable, Accessible, Interoperable, and Reusable) research data management platform, contributing to the research data lifecycle and enhancing data reuse.
 
@@ -6,37 +6,34 @@ This repository is a template for a Nextcloud app called **MetaDataGeneratorNC**
 
 ### Why FAIR Metadata?
 - **Controlled Vocabulary:**  
-  Standardized metadata with controlled vocabularies ensures that research datasets are easily searchable and interoperable.
+  Standardized metadata with controlled vocabulary ensures that research datasets are **Findable, Accessible, Interoperable,** and **Reusable**.
 - **Accelerated Research Data Lifecycle:**  
-  By integrating metadata templates into your Nextcloud environment, the process from data creation to curation, sharing, and reuse is streamlined.
+  Integrating metadata templates into your Nextcloud environment accelerates the process from data creation and curation to sharing and reuse.
 - **Seamless Data Reuse:**  
-  Consistent metadata allows for smooth integration across projects and consortia, ultimately increasing the value and usability of research data.
+  Consistent metadata facilitates smooth data integration across projects, consortia, and platforms, enhancing the overall usability and value of research data.
 
 ### What MetaDataGeneratorNC Provides
 - **Metadata Template Creation:**  
-  Create customized metadata templates using controlled vocabularies directly within Nextcloud.
+  Create and customize metadata templates using controlled vocabularies directly within Nextcloud.
 - **Metadata Application:**  
-  Apply existing metadata templates to your project or data folders, and attach the metadata as XML files.
+  Apply existing metadata templates to your project or data folders and attach metadata as XML files.
 - **Enhanced FAIR RDM:**  
-  By standardizing metadata at the source, the app makes Nextcloud an effective platform for FAIR research data management, supporting better data curation, sharing, and reuse.
+  Ensures that all datasets are consistently annotated, making Nextcloud a robust platform for FAIR research data management.
 
-## Getting Started
+## Installation
 
-### Prerequisites
-- **Nextcloud Instance:**  
-  A running Nextcloud server is required to install and use MetaDataGeneratorNC.
-- **Basic Knowledge of Nextcloud App Development:**  
-  Familiarity with Nextcloud app development will help in customizing and deploying the app.
+1. **Download the App:**  
+   Download the latest release of MetaDataGeneratorNC from the [Releases](https://github.com/your-org/MetaDataGeneratorNC/releases) page.
 
-### Installation
+2. **Copy to Nextcloud:**  
+   Copy the downloaded app folder into the `apps/` directory of your Nextcloud installation.
 
-#### Nextcloud App Generation
-- **Dynamic Generation:**  
-  Use the [Nextcloud Appstore App Generator](https://apps.nextcloud.com/) to create an app instance based on this repository with prefilled constants.
-- **Template Usage:**  
-  Click the **"Use this template"** button on GitHub to create a new repository from this template. Adjust necessary constants (e.g., App ID, namespace, descriptions) as needed.
-- **Deployment:**  
-  Follow the Nextcloud app development guidelines to deploy the app on your Nextcloud instance or submit it to the Nextcloud Appstore.
+3. **Enable the App:**  
+   Log in to your Nextcloud instance as an administrator, navigate to the Apps section, and enable MetaDataGeneratorNC.
+
+## Contributing
+
+We welcome contributions to the development of MetaDataGeneratorNC. Whether you're reporting bugs, requesting new features, or submitting pull requests, your help is greatly appreciated. Please take a look at the following developer resources to get started:
 
 ## Resources
 
@@ -48,14 +45,10 @@ This repository is a template for a Nextcloud app called **MetaDataGeneratorNC**
 - **Community Chat:** [Nextcloud Chat](https://cloud.nextcloud.com/call/xs25tz5y)
 - **Community Forum:** [Nextcloud Developer Forum](https://help.nextcloud.com/c/dev/11)
 
-## Contributing
-
-This project is maintained by the Core Unit RDM (cRDM) and the DECIDE consortium. Contributions, bug reports, and suggestions are welcome. Please use standard GitHub workflows to submit issues or pull requests.
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE) – see the LICENSE file for details.
 
 ---
 
-By integrating these FAIR metadata templates into Nextcloud via MetaDataGeneratorNC, we aim to create a robust framework for research data management. The app ensures that all datasets are consistently annotated with standardized metadata, making them more accessible and reusable, and thereby advancing the overall research data lifecycle.
+By integrating FAIR metadata templates directly into Nextcloud with MetaDataGeneratorNC, we aim to establish a robust framework for research data management that ensures data is efficiently curated, shared, and reused across projects and consortia.
